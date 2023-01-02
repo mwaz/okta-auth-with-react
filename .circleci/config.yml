@@ -16,6 +16,13 @@
 version: 2.1
 orbs:
   cypress: cypress-io/cypress@1
+executors:
+  base10-foo-bar:
+    docker:
+      - image: cypress/base:10
+    environment:
+            OktaUsername: $OktaUsername
+            OktaUserPassword: $OktaUserPassword
 workflows:
   build:
     jobs:
