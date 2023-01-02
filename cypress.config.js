@@ -1,17 +1,19 @@
 const { defineConfig } = require("cypress");
+require('dotenv').config();
 
 module.exports = defineConfig({
   e2e: {
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
+    experimentalSessionAndOrigin: true,
   },
 
   chromeWebSecurity: false,
 
   env: {
-    OktaUserName: "replace-with-your-okta-username",
-    OktaUserPassword: "replace-with-your-okta-password",
+    OktaUserName: process.env.OktaUsername,
+    OktaUserPassword:  process.env.OktaUserPassword,
   },
 
   component: {
