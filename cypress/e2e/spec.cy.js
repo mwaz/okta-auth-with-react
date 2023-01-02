@@ -1,5 +1,3 @@
-require('dotenv').config();
-
 describe('Test Okta Authentication', () => {
 
   it('Page renders correctly', () => {
@@ -51,7 +49,6 @@ describe('Test Okta Authentication', () => {
     cy.get('input#input36').type(`${Cypress.env('OktaUserPassword')}`); // or hardcode the password
     // Find with id button#submit and click it
     cy.get('input.button.button-primary').click();
-
     cy.get('p').should('contain', "Welcome! We're glad you're here ...");
     cy.get('[data-testid="logout-button"]').should('exist');
     cy.get('[data-testid="logout-button"]').click();
