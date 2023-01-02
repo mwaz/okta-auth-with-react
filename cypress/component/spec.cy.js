@@ -1,14 +1,14 @@
 
-import App from "../../src/App";
+import App from "../../src/Home";
 
 describe('Test Okta Authentication', () => {
-  it('Page renders correctly', () => {
-    cy.visit('localhost:3000');
+  it.only('Page renders correctly', () => {
+    cy.mount(<App />); // mount the component
     cy.get('h1').should('contain', 'Hello, world!');
   })
   // Get the login form and fill it out
   it('Login with email works', () => {
-    cy.visit('localhost:3000');
+    cy.mount(<App />); // mount the component
     // Console log the current URL
     cy.get('button').contains('Login').click();
     // Assert that the URL contains part of the Okta login URL
@@ -24,7 +24,7 @@ describe('Test Okta Authentication', () => {
 
   // Test that the user is logged in
   it('User is logged in', () => {
-    cy.visit('localhost:3000');
+    cy.mount(<App />); // mount the component
     cy.get('[data-testid="logout-button"]').should('exist');
     cy.get('p').should('contain', "Welcome! We're glad you're here ...");
   })
