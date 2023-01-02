@@ -12,7 +12,7 @@ module.exports = defineConfig({
   chromeWebSecurity: false,
 
   env: {
-    OktaUserName: process.env.OktaUsername,
+    OktaUserName: process.env.OktaUserName,
     OktaUserPassword:  process.env.OktaUserPassword,
   },
 
