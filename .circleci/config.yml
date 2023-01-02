@@ -7,4 +7,4 @@ workflows: # Workflows are a declarative way to orchestrate jobs and their run o
   build: 
     jobs:
       - cypress/run: # Run the cypress/run job from the cypress orb
-          command: npx cypress run  # Run the cypress run command in headless mode
+          command: npx cypress run --headless --component  # Run the cypress run command in headless mode
