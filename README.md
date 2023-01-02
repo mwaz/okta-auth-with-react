@@ -1,4 +1,4 @@
-# Okta Auth with react
+# Okta Auth in React
 
 [![CircleCI](https://circleci.com/gh/mwaz/okta-auth-with-react.svg?style=svg)](https://circleci.com/gh/mwaz/okta-auth-with-react)
 
@@ -36,7 +36,7 @@ npm run test
 
 This repo is built following a tutorial published on CircleCI blog under the CircleCI Guest Writer Program.
 
--   Blog post: [  Integrating Okta Authentication with React ][blog]
+-   Blog post: [  Integrating Okta Authentication in React ][blog]
 -   Author's GitHub profile: [Waweru Mwaura][author]
 
 ### About CircleCI Guest Writer Program
